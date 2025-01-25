@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+
+:root{
+  --bg: #EEEEFF;
+  --dark: #28587B;
+  --text: #111721;
+  --light: #9FB4C7;
+  --t2: #9FB798;
+  --t4: #788D71;
+}
+
+body{
+  background-color: var(--bg);
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#app{
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#grid{
+  width: 33vw;
+  aspect-ratio: 1;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: var(--dark);
+  border-radius: 15px;
+  border: solid var(--dark) 10px;
+}
+
+.cell{
+  background-color: var(--light);
+  width: 90%;
+  aspect-ratio: 1;
+  border-radius: 10px;
+}
+
+.tile{
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 10px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+
+  color: var(--text);
+  font-family: sans-serif;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.tile-2{
+  background-color: var(--t2);
+}
+
+
+.tile-4{
+  background-color: var(--t4);
+}
+
+#me, a{
+  color: var(--dark);
+  font-family: "Caveat", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 1.5rem;
+  font-style: normal;
+}
