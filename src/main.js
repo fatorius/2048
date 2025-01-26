@@ -50,8 +50,13 @@ function initTiles(){
 	choosenCells.forEach((cellNumber) => {
 		const tileValue = getRandomFromArrayWithWeights(NEW_TILES_VALUES, NEW_TILES_WEIGHTS);
 
-		cells[cellNumber].append(createTileElement(tileValue));
+		const newTile = createTileElement(tileValue);
+		newTile.classList.add("tile-shrink");
+
+		cells[cellNumber].append(newTile);
 		tile_values[cellNumber] = tileValue;
+
+		newTile.classList.remove("tile-shrink");
 	})
 }
 
@@ -68,9 +73,16 @@ function obterCelulasVazias() {
 function generateNewTile(){
 	const newCell = getRandomFromArray(obterCelulasVazias());
 	const tileValue = getRandomFromArrayWithWeights(NEW_TILES_VALUES, NEW_TILES_WEIGHTS);
-	cells[newCell].append(createTileElement(tileValue));
+
+	const newTile = createTileElement(tileValue);
+	newTile.classList.add("tile-shrink");
+
+	cells[newCell].append(newTile);
 	tile_values[newCell] = tileValue;
 
+	setTimeout(() => {
+		newTile.classList.remove("tile-shrink");
+	}, 100);
 }
 
 function updateScore(){
