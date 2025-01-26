@@ -68,7 +68,6 @@ function obterCelulasVazias() {
 function generateNewTile(){
 	const newCell = getRandomFromArray(obterCelulasVazias());
 	const tileValue = getRandomFromArrayWithWeights(NEW_TILES_VALUES, NEW_TILES_WEIGHTS);
-
 	cells[newCell].append(createTileElement(tileValue));
 	tile_values[newCell] = tileValue;
 
@@ -125,7 +124,7 @@ function findTopmostAvailableTile(pos, value){
 }
 
 function findRightmostAvailableTile(pos, value){
-	const tilesRight = (NUMBER_OF_ROWS_AND_COLUMNS - pos) - 1;
+	const tilesRight = (((Math.floor(pos / NUMBER_OF_ROWS_AND_COLUMNS) + 1) * 4)- pos) - 1;
 
 	for (let i = 1; i <= tilesRight; i++){
 		const checkingPos = pos + 1;
