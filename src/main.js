@@ -14,8 +14,6 @@ const NEW_TILES_WEIGHTS = [0.75, 0.25];
 
 const cells = [];
 const tile_values = [];
-var score = 0;
-
 
 const scoreElement = document.getElementById("score");
 
