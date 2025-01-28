@@ -154,9 +154,9 @@ function findRightmostAvailableTile(pos, value){
 }
 
 function findBottommostAvailableTile(pos, value){
-	const tilesUp = Math.floor(NUMBER_OF_CELLS - pos / NUMBER_OF_ROWS_AND_COLUMNS);
+	const tilesDown = Math.floor((NUMBER_OF_CELLS - pos) / NUMBER_OF_ROWS_AND_COLUMNS);
 
-	for (let i = 1; i <= tilesUp; i++){
+	for (let i = 1; i <= tilesDown; i++){
 		const checkingPos = pos + NUMBER_OF_ROWS_AND_COLUMNS;
 
 		if (tile_values[checkingPos] !== 0){
